@@ -1,0 +1,8 @@
+<table>
+  <tr (click)="onclick(department)" *ngFor="let department of departments">
+    <td>{{department.DepartmentName}}</td>
+    <td>{{department.Id}}</td>
+    <td>{{department.Employees}}</td>
+  </tr>
+</table>
+<app-departments></app-departments>

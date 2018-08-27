@@ -1,0 +1,15 @@
+table{
+    width: 30%;
+    margin-top: 50px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td{
+    width: 8%;
+    border: 2px solid black;
+    border-collapse: collapse; 
+    padding: 5px;
+    border-color: rgb(165, 206, 126);
+    color: grey;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+<div>
+  <ul>
+    <li routerLinkActive="active current" ><a routerLink="/home" [queryParams]= "{edit: 1}" 
+    fragment="loading">Home</a></li>
+    <li routerLinkActive="active"><a routerLink="/services">Services</a></li>
+    <li routerLinkActive="active"><a routerLink="/content">Content</a></li>
+    <li routerLinkActive="active"><a routerLink="/careers">Careers</a></li>
+  </ul>
+</div> 
+<button (click)="onRoute()">ROUTE ME</button>
+<router-outlet></router-outlet>
+<app-content></app-content>
+<button (click)="onClick()">Click</button>
+
+
+<!-- Angular forms -->
+<!-- <form>
+  <label for="name">Name:</label>
+  <input value="first name" type="text" id="name"><br>
+  <label for="email">Email:</label>
+  <input value="email" type="email">
+</form> -->
+
