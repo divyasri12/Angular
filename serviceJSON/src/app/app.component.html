@@ -1,0 +1,17 @@
+<div>
+  <table>
+    <tr>
+      <th>user id</th>
+      <th>id</th>
+      <th>title</th>
+      <th>body</th>
+    </tr>
+    <tr *ngFor="let key of tab">
+      <td>{{key.userId}}</td>
+      <td>{{key.id}}</td>
+      <td>{{key.title}}</td>
+      <td>{{key.body}}</td>
+    </tr>   
+  </table>
+</div>
+<app-new></app-new>

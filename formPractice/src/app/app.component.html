@@ -1,0 +1,34 @@
+<form #ref="ngForm" (ngSubmit)="onsubmit(ref.value)">
+  <div class="form-group" class="col-sm-12">
+    <label for="name" class="col-sm-1">Full Name</label>
+    <input type="text" id="name"  ngModel name="name" required #nameref="ngModel" minlength=4>
+   
+  </div>
+  <div *ngIf="nameref.invalid&&(nameref.touched)" class="alert alert-danger col-sm-2" style="margin-left:30px;">
+    <div [hidden]="!nameref.errors.required">
+      please enter full name
+    </div>
+    <div [hidden]="!nameref.errors.minlength">
+      Please enter min of 4 characters
+    </div>
+  </div>
+  
+  <div class="form-group"class="col-sm-12">
+    <label for="email" class="col-sm-1">Email</label>
+    <input type="email" id="email"  ngModel name="email" #emailref="ngModel" required>
+  </div>
+  <div *ngIf="emailref.invalid&&(emailref.touched|| emailref.dirty)" class="alert alert-danger">
+    Please enter a valid email
+  </div>
+  <div class="form-group">
+    <select name="opt" id="opt" required ngModel #selref="ngModel">
+      <option value=""></option>
+      <option value="divya">divya</option>
+      <option value="sonu">sonu</option>
+    </select>
+  </div>
+  <div *ngIf="selref.invalid&&selref.untouched">
+    Please select an option
+  </div>
+  <button type="submit" class="btn btn-primary col-sm-1" style="margin: 20px" [disabled]="!ref.form.valid">Submit</button>
+</form>
