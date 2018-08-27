@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  num: number = 0;
+  x;
+    count(){
+      (this.x=setInterval(() => {this.num++},500));
+    }
+    stop(){
+      clearInterval(this.x);
+      // this.num=0;
+    }   
 }
